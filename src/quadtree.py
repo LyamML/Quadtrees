@@ -52,12 +52,10 @@ class TkQuadTree(QuadTree):
         window = tk.Tk()
         window.title("QuadTree Visualization")
         canvas = tk.Canvas(window, width=SIZE, height=SIZE, bg="lightgrey")
-
-
-
+        
         canvas.pack()
         window.mainloop()
 
-if __name__ == "__main__": # Ligne ajoutée par Claude car la fenetre s'ouvrait en BOUCLE avec mes tests ci-dessous
+if __name__ == "__main__": # Ligne ajoutée par Claude car la fenetre s'ouvrait en BOUCLE avec mes tests ci-dessous, si j'ai bien compris ca évite que les tests pytest & vscode relancent la fenêtre involontairement
     quadtreevis = TkQuadTree("files/quadtree.txt")
     quadtreevis.paint()
